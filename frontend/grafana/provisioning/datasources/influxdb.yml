@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    url: http://<localhost>:8086 
+    database: mydb
+    user: admin
+    secureJsonData:
+      password: ChangeMe123!
+    jsonData:
+      httpMode: GET
+      version: InfluxQL
+    isDefault: true
